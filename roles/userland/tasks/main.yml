@@ -1,0 +1,21 @@
+---
+
+- name: install mutt 
+  yum: pkg=mutt state=installed
+  tags: userland
+
+- name: install git 
+  yum: pkg=git state=installed
+  tags: userland
+
+- name: install figlet 
+  yum: pkg=figlet state=installed
+  tags: userland
+
+#- name: install pico 
+  #yum: pkg=pico state=installed
+  #tags: userland
+
+- name: install emacs 
+  yum: pkg=emacs state=installed
+  tags: userland

@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: True
+  sudo: True
+  roles:
+    - www
+    - userland
+    - docker
+    #- email
+    #- irc
+    #- news
