@@ -3,3 +3,5 @@
 - name: install docker
   yum: pkg=docker state=installed
   tags: docker
+  notify:
+     - restart docker
