@@ -5,3 +5,6 @@
   tags: docker
   notify:
      - restart docker
+
+- name: add ec2-user to docker group
+  user: name=ec2-user groups=docker
