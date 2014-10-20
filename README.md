@@ -11,3 +11,7 @@ Goal: automate setting up a tilde-host?
 ## Then, after cloning this repo
 * export PATH=$PATH:/path/to/ansible/bin
 * ansible-playbook -i inventory main.yml
+
+## TODO
+* https://registry.hub.docker.com/
+* IRC, nntp, ...
