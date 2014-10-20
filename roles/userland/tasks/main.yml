@@ -23,3 +23,7 @@
 - name: install emacs 
   yum: pkg=emacs state=installed
   tags: userland
+
+- name: install irssi
+  yum: pkg=irssi state=installed
+  tags: userland
