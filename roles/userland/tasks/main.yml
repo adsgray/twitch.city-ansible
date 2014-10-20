@@ -12,6 +12,10 @@
   yum: pkg=figlet state=installed
   tags: userland
 
+- name: install htop
+  yum: pkg=htop state=installed
+  tags: userland
+
 #- name: install pico 
   #yum: pkg=pico state=installed
   #tags: userland
