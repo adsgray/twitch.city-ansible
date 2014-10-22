@@ -17,3 +17,10 @@ Goal: automate setting up a tilde-host?
 
 ## TODO
 * different /etc/skel repo
+* install: zsh, csh, tcsh, fish (requires new repo, how to do with ansible?)
+* rrdtool, jq
+* mg vile zile (editors)
+* slrn is a problem, must be manually done. 
+* talk-server
+* postfix ?
+* others from: https://github.com/tildeclub/tilde.club/blob/master/docs/server.org
