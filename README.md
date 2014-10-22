@@ -16,5 +16,4 @@ Goal: automate setting up a tilde-host?
 * ansible-playbook -i inventory main.yml
 
 ## TODO
-* https://registry.hub.docker.com/
-* IRC, nntp, ...
+* different /etc/skel repo
