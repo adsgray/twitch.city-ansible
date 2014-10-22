@@ -27,3 +27,9 @@
 - name: install irssi
   yum: pkg=irssi state=installed
   tags: userland
+
+- name: install oidentd
+  yum: name=oidentd enablerepo=epel state=present
+
+- name: start oidentd
+  service: name=oidentd enabled=yes state=started
