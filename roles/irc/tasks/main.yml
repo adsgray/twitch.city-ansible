@@ -1,0 +1,6 @@
+---
+
+- name: irc docker image
+  docker: image={{irc_docker}} command={{irc_docker_command}} ports=6667:6667
+  tags: irc
+

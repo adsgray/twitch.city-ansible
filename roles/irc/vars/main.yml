@@ -1,0 +1,5 @@
+---
+
+irc_docker: "xena/elemental-ircd"
+irc_docker_command: ""
+
