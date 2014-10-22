@@ -33,3 +33,15 @@
 
 - name: start oidentd
   service: name=oidentd enabled=yes state=started
+
+- name: install git
+  yum: pkg=git state=installed
+
+- name: remove existing /etc/skel files
+  shell: rm -f /etc/skel/* /etc/skel/.*
+  ignore_errors: yes
+
+- name: install skel repository
+  git: repo={{skel_repo}}
+       dest=/etc/skel
+       depth=1
