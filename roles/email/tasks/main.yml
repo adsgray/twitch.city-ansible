@@ -10,3 +10,13 @@
 
 - name: enable postfix service
   service: name=postfix state=started enabled=yes
+
+# http://cafim.sssup.it/~giulio/other/Postfix_Setup_for_Local_Mail_Only.html
+# but:
+#    - had to set myhostname and mydomain to {{ hostname }}
+#    - had to remove $myhostname from inet_ineterfaces
+- name: local-only mail config
+  template: src=local-only-postfix-main.cf.j2 dest=/etc/postfix/main.cf owner=root group=root mode=0644
+  notify:
+     - restart postfix
+  
