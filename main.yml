@@ -5,6 +5,7 @@
   sudo: True
   roles:
     - www
+    - email
     - userland
     - docker
     - irc

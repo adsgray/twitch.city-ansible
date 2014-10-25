@@ -1,0 +1,12 @@
+---
+
+- name: uninstall sendmail 
+  yum: pkg=sendmail state=absent
+  tags: email
+
+- name: install postfix
+  yum: pkg=postfix state=present
+  tags: email
+
+- name: enable postfix service
+  service: name=postfix state=started enabled=yes
