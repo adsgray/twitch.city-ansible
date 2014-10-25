@@ -6,5 +6,9 @@
   notify:
      - restart docker
 
+- name: enable docker service
+  service: name=docker enabled=yes
+
 - name: add ec2-user to docker group
   user: name=ec2-user groups=docker
+
