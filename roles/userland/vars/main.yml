@@ -1,3 +1,32 @@
 ---
 
 skel_repo: https://github.com/tildeclub/tilde.etcskel.git
+
+packages:
+    - mutt
+    - git
+    - figlet
+    - htop
+    - emacs
+    - irssi
+    - zsh
+    - tcsh
+    - talk-server
+    - rrdtool
+    - jq
+    - elinks
+    - lynx
+    - ImageMagick
+    - readline
+    - tig
+    - tidy
+
+epel_packages:
+    - oidentd
+    - mg
+    - zile
+    - vile
+    - nodejs
+    - npm
+    - sbcl
+    - fortune-mod

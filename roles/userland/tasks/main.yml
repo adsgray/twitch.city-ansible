@@ -1,41 +1,15 @@
 ---
 
-- name: install mutt 
-  yum: pkg=mutt state=installed
-  tags: userland
+- name: install packages
+  yum: pkg={{ item }} state=installed 
+  with_items: packages
 
-- name: install git 
-  yum: pkg=git state=installed
-  tags: userland
-
-- name: install figlet 
-  yum: pkg=figlet state=installed
-  tags: userland
-
-- name: install htop
-  yum: pkg=htop state=installed
-  tags: userland
-
-#- name: install pico 
-  #yum: pkg=pico state=installed
-  #tags: userland
-
-- name: install emacs 
-  yum: pkg=emacs state=installed
-  tags: userland
-
-- name: install irssi
-  yum: pkg=irssi state=installed
-  tags: userland
-
-- name: install oidentd
-  yum: name=oidentd enablerepo=epel state=present
+- name: install epel packages
+  yum: pkg={{ item }} state=installed enablerepo=epel
+  with_items: epel_packages
 
 - name: start oidentd
   service: name=oidentd enabled=yes state=started
-
-- name: install git
-  yum: pkg=git state=installed
 
 - name: remove existing /etc/skel files
   shell: rm -f /etc/skel/* /etc/skel/.*
